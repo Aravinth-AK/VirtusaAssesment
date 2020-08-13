@@ -1,0 +1,14 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Users\\Sedhu\\Desktop\\speechRecogonizationAPI_Base\\SpeechApi-api-logs\\.e17ebf4c92469558565217e4e38341f32052d227-audit.json",
+    "files": [
+        {
+            "date": 1587450551968,
+            "name": "C:\\Users\\Sedhu\\Desktop\\speechRecogonizationAPI_Base\\SpeechApi-api-logs\\SpeechApi-api-21-04-2020.log",
+            "hash": "abfbf5bbe98febf4f6ae70b5d6310885"
+        }
+    ]
+}

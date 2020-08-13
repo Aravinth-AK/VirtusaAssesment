@@ -1,0 +1,149 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Virtusa Assesment",
+        "description": "Returns Parsed Employee details",
+        "version": "1.0.0",
+        "contact": {
+            "name": "Virtusa Assesment",
+            "email": "aravinthbtch@gmail.com"
+        }
+    },
+    "produces": [
+        "application/json"
+    ],
+    "host": "localhost:2020",
+    "basePath": "/api",
+    "tags": [
+        {
+            "name": "EndPoint V1",
+            "description": "Follows the v1 scenario"
+        }
+    ],
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "paths": {
+      
+        "/v1/parse/": {
+            "post": {
+                "tags": [
+                    "v1 controller"
+                ],
+                "summary": "follows v1 schema",
+                "operationId": "user-query",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "type": "object",
+                        "schema": {
+                            "$ref": "#/definitions/GetRequestedDetails"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "response of parser API",
+                        "schema": {
+                            "type": "object",
+                            "$ref": "#/definitions/GetUserQueryResponse"
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/responses/400"
+                    },
+                    "500": {
+                        "$ref": "#/responses/500"
+                    }
+                }
+            }
+        },
+        
+        "/v2/parse/": {
+            "post": {
+                "tags": [
+                    "v1 controller"
+                ],
+                "summary": "follows v1 schema",
+                "operationId": "user-query",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "type": "object",
+                        "schema": {
+                            "$ref": "#/definitions/GetRequestedDetails"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "response of parser API",
+                        "schema": {
+                            "type": "object",
+                            "$ref": "#/definitions/GetUserQueryResponse"
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/responses/400"
+                    },
+                    "500": {
+                        "$ref": "#/responses/500"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "GetRequestedDetails": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "type": "string",
+                    "description": "user query statement",
+                    "example":"JOHN0000MICHAEL0009994567"
+                }
+            }
+        },
+        "GetUserQueryResponse": {
+            "type": "object",
+            "properties": {
+                "status code": {
+                    "type": "number",
+                    "description": "Status response of API"
+                },
+                "data": {
+                    "type": "object",
+                    "description": "Parsed details requested by the user"
+                }
+            }
+        }
+    },
+
+        
+    
+
+    "responses": {
+        "200": {
+            "description": "An array of enduse objects"
+        },
+        "400": {
+            "description": "The server was unable to process the request sent by the client due to invalid syntax."
+        },
+        "500": {
+            "description": "Something has gone wrong on the server, but the server could not be more specific on what the exact problem is."
+        }
+    }
+
+}
+

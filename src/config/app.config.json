@@ -1,0 +1,20 @@
+{
+        "DBConnections": {
+                "user": "admin",
+                "password": "test@123",
+                "Port": 27017,
+                "server": "localhost",
+                "database": "Local",
+                "dbType": "mongodb",
+            "logging": false
+        },
+    "AppSettings": {
+        "baseRoute": "",
+        "exclude": []
+    },
+    "AppConfig": {
+        "name": "API",
+        "version": "1.0.0",
+        "port": 2020
+    }
+}
